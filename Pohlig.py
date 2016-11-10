@@ -14,7 +14,7 @@ def PH(p, g, h):
         j = 0
         while(j<i[1]):
             hij = (pow(hi,pow(i[0], i[1]-1-j) , p) * pow(gi_,pow(i[0], (i[1]-1-j))*xi , p) )%p
-            xij = BSGS(p, gi_linha, hij)
+            xij = BSGS(p, gi_linha, hij, i[0])
             xi +=( int(xij) * pow(i[0], j))
             j+=1
         result = Chinese(result, (xi, pow(i[0], i[1])))

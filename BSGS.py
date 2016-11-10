@@ -1,7 +1,7 @@
 from math import sqrt
 from euclidiano import inverso
-def BSGS(p, g, h):
-    m = int(sqrt(p-1))
+def BSGS(p, g, h, ordem):
+    m = int(sqrt(ordem))
     if (sqrt(p-1) - m != 0):
         m += 1
     j = 0
